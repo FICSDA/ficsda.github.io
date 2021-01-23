@@ -1,0 +1,475 @@
+/*
+---GLOBAL---
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #444444;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  /*overflow-x: hidden;*/
+}
+p {
+  color: #444444;
+  font-size: 14px;
+
+}
+h1 {
+  font-size: 36px;
+}
+a:visited {text-decoration: none; color: none;}
+ul {
+  font-size: 14px;
+}
+.button {
+  font-size: 14px;
+  border: 2px solid;
+  border-radius: 24px;
+  cursor: pointer;
+
+  padding: 12px 24px;
+}
+.bg {
+  position: absolute;
+  z-index: -100;
+
+  background-repeat: no-repeat;
+}
+
+/* footer */
+footer {
+  background-color: #444;
+  padding: 16px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer p {
+  color: white;
+}
+
+#footer-copyright {
+  display: flex;
+  align-items: center;
+}
+#footer-copyright img {
+  width: 28px;
+  margin-right: 12px;
+}
+
+#footer-social {
+ color: white;
+ text-align: right;
+}
+#footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+#footer-social-icons a {
+  margin-left: 12px;
+}
+
+
+
+/*
+---LANDING---
+*/
+#landing-all {
+  height: 100vh;
+  width: 100%;
+}
+
+/* nav bar */
+#logotype-dark {
+  width: 156px;
+  height: 24px;
+}
+nav {
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 128px;
+
+  transition: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+#landing-nav {
+  animation: navload 1s;
+  animation-timing-function: ease;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+@keyframes navload {
+    from {opacity: 0;}
+    to {opacity: 1}
+}
+#about-nav:hover {
+  background-color: rgba(250, 250, 250, 0.4);
+}
+#landing-nav ul li a {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 40px;
+
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+nav ul li:hover {
+  transform: translateY(-2px);
+}
+nav ul li a {
+  color: #5A678E;
+}
+#landing-all ul li:nth-child(1) {
+  text-decoration: underline;
+}
+
+#contact-landing {
+  color: white;
+  border-color: white;
+
+  transition-property: color, background-color;
+  transition-duration: 0.15s, 0.15s;
+  transition-timing-function: ease;
+}
+#contact-landing:hover {
+  color: #61B8F5;
+  background-color: white;
+}
+
+/* landing block */
+#landing-wrap {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 93px);
+
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 15%;
+  transform: translateY(-50%);
+
+  animation: landingload 0.75s;
+  animation-timing-function: ease;
+}
+@keyframes landingload {
+  from {margin-top: -32px; opacity: 0;}
+  to {margin-top: 0px; opacity: 1}
+}
+
+#landing h1 {
+  color: #4e73dd;
+  margin-bottom: 16px;
+}
+#landing p {
+  color: #444444;
+  margin-bottom: 40px;
+}
+#landing-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* livestream button */
+#stream img {
+  margin-right: 8px;
+}
+
+#stream {
+  color: white;
+  border: 0px;
+  background-image: linear-gradient(90deg, #45e355, #55ee88);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 24px;
+
+  transition-property: color, transform, box-shadow;
+  transition-duration: 0.15s, 0.2s, 0.25s;
+  transition-timing-function: ease;
+}
+#stream:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px rgba(69, 227, 85, 0.4);
+}
+
+/* programme button */
+#programme {
+  color: #5A678E;
+  border-color: #5A678E;
+
+  transition-property: color, background-color, transform, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.2s, 0.25s;
+  transition-timing-function: ease;
+}
+#programme:hover {
+  color: white;
+  background-color: #5A678E;
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(90, 103, 142, 0.5);
+ }
+
+/* background */
+#gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 1020px;
+}
+#church {
+  z-index: -99;
+  right: -288px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*
+---ABOUT---
+*/
+/* nav bar */
+#about-nav ul li a {
+  color: #5A678E;
+}
+#contact-about {
+  color: #5A678E;
+  border-color: #5A678E;
+
+  transition-property: color, background-color;
+  transition-duration: 0.15s, 0.15s;
+  transition-timing-function: ease;
+}
+#contact-about:hover {
+  color: white;
+  background-color: #5A678E;
+}
+
+#about-nav ul li:nth-child(2) {
+  text-decoration: underline;
+}
+#about h1 {
+  color: #4e73dd;
+  margin-top: 40px;
+  padding: 0 200px;
+  font-size: 48px;
+}
+#about > p {
+  padding: 0px 200px;
+  margin-top: 24px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* banner2 */
+#about-block-2-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0px 240px;
+  margin: 80px 0px;
+}
+#about-block-2 {
+  display: inline-grid;
+  grid-template-columns: 47% 6% 47%;
+}
+.about-column {
+  padding: 48px;
+  box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  border-radius: 2rem;
+}
+
+/* about column 1 - service times */
+#about-column-1-wrap {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: right;
+}
+#service-times {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+#service-times ul {
+  margin-top: 4px;
+}
+#service-times ul:last-child {
+  text-align: right;
+}
+#service-times li {
+  margin-top: 4px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* about column 2 - directions */
+#about-column-2-wrap {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#about-column-2 {
+  transition: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+#about-column-2:hover {
+  box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.1);
+
+}
+
+#maps-link {
+  display: flex;
+  justify-content: space-between;
+}
+#maps-link p{
+  color: #919AA4;
+  font-style: italic;
+}
+
+#about-column-2 h2 {
+  margin-bottom: 8px;
+}
+#about-column-2 div h4 {
+  margin: 16px 0 4px 0;
+}
+
+/* message from pastor */
+#pastor-wrap {
+  background-color: #f7f7f7;
+  animation: pastorfade 1s;
+  animation-timing-function: ease;
+}
+@keyframes pastorfade {
+  from {margin-top: -16px; opacity: 0;}
+  to {margin-top: 0px; opacity: 1}
+}
+
+#pastor {
+  margin: 0 200px;
+  padding: 56px 32px 56px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pastor-pic img {
+  width: 240px;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.1);
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+#pastor-pic img:hover {
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+#pastor-message {
+  margin-left: 112px;
+  transform: translateY(-10%);
+}
+#pastor-message h2 {
+  margin-bottom: 32px;
+  color: #4e73dd;
+}
+#pastor-message p {
+  font-size: 22px;
+}
+
+blockquote {
+  position: relative;
+  padding: 8px 0px 0px 32px;
+}
+blockquote:before {
+  content: "\201C";
+  position: absolute;
+  transform: translate(-60%, -128px);
+  font: 440px 'PT Sans', sans-serif;
+  color: #ededed;
+  z-index: -1;
+  line-height: 100%;
+}
+blockquote:after {
+  content: "\2014" attr(cite);
+  display: block;
+  text-align: right;
+  color: #919AA4;
+}
+blockquote p:before {
+  content: "|";
+  position: absolute;
+  transform: translateX(-24px);
+  font: 24px;
+}
+
+/* beliefs grid */
+#beliefs {
+  padding: 64px 200px 64px;
+}
+#beliefs-grid {
+  display: inline-grid;
+  grid-template-columns: auto 40px auto;
+  margin-top: 28px;
+  padding: 0 20px;
+}
+#beliefs-column-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#beliefs-column-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#beliefs-grid ul li {
+  margin-bottom: 18px;
+}
+#beliefs-grid ul li h4 {
+  margin-bottom: 6px;
+}
+
+#beliefs-pdf {
+  display: inline-block;
+  margin-left: 20px;
+  border-color: #45E355;
+  color: #45E355;
+
+  transition-property: color, background-color, transform, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.2s, 0.25s;
+  transition-timing-function: ease;
+}
+#beliefs-pdf:hover {
+  color: white;
+  background-color: #45E355;
+
+  box-shadow: 0px 1px 12px rgba(69, 227, 85, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*bottom*/
